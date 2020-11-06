@@ -8,16 +8,16 @@ import { Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <div className='App'>
+        <Search />
         <Switch>
-          <Search />
-          <Route path='/movies' />
-          <Route exact path='/' />
+          <Route path='/movies' component={Movies} />
+          <Route exact path='/' component={Shows} />
         </Switch>
       </div>
-    </div>
+    </>
   )
 }
 

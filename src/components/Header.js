@@ -8,17 +8,17 @@ const Header = () => {
     <nav>
       <ul className='App-header'>
         <li>
-          <Link className='logo' href='/'>
+          <Link className='logo' to='/'>
             <img src={logoSrc} alt='Logo' />
           </Link>
         </li>
         <li>
-          <Link href='/movies' className='button'>
+          <Link to='/movies' className='button'>
             Movies
           </Link>
         </li>
         <li>
-          <Link href='/' className='button'>
+          <Link to='/' className='button'>
             TV Shows
           </Link>
         </li>
