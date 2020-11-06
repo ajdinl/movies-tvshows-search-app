@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const logoSrc =
@@ -7,19 +8,19 @@ const Header = () => {
     <nav>
       <ul className='App-header'>
         <li>
-          <a className='logo' href='/'>
+          <Link className='logo' href='/'>
             <img src={logoSrc} alt='Logo' />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='/movies' className='button'>
+          <Link href='/movies' className='button'>
             Movies
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='/' className='button'>
+          <Link href='/' className='button'>
             TV Shows
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

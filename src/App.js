@@ -4,19 +4,20 @@ import Header from './components/Header'
 import Search from './components/Search'
 import { Movies } from './components/Movies'
 import { Shows } from './components/Shows'
+import { Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-      <Header>
-        <div className='App'>
+    <div>
+      <Header />
+      <div className='App'>
+        <Switch>
           <Search />
-          <Search />
-          <Shows />
-          <Movies />
-        </div>
-      </Header>
-    </>
+          <Route path='/movies' />
+          <Route exact path='/' />
+        </Switch>
+      </div>
+    </div>
   )
 }
 

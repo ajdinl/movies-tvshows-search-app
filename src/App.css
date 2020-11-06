@@ -44,3 +44,54 @@ body {
   height: 15px;
   margin: 5px 10px;
 }
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.search > input[type='text'] {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 50%;
+  min-width: 170px;
+}
+
+.search input[type='text']:focus {
+  outline: none;
+}
+
+input[type='submit'] {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  width: 80px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #282c34;
+  color: antiquewhite;
+}
+
+.movies,
+.shows {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  max-width: 1000px;
+}
+
+.movie,
+.show {
+  width: 400px;
+  border: 1px solid gray;
+  margin-top: 50px;
+}
