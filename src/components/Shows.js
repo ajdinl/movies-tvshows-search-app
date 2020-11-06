@@ -3,7 +3,7 @@ import { Show } from './Show'
 
 export const Shows = () => {
   return (
-    <div>
+    <div className='shows'>
       <h1>Shows Component</h1>
       <Show />
     </div>
