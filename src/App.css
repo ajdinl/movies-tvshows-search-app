@@ -53,31 +53,15 @@ body {
 }
 
 .search > input[type='text'] {
-  border-radius: 25px;
   border: 1px solid black;
   padding: 10px;
   width: 50%;
   min-width: 170px;
+  box-shadow: 0px 0px 20px -5px rgba(136, 136, 136, 1);
 }
 
 .search input[type='text']:focus {
   outline: none;
-}
-
-input[type='submit'] {
-  border-radius: 25px;
-  border: 1px solid black;
-  padding: 10px;
-  background-color: transparent;
-  color: black;
-  width: 80px;
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-input[type='submit']:hover {
-  background-color: #282c34;
-  color: antiquewhite;
 }
 
 .movies,
@@ -92,12 +76,52 @@ input[type='submit']:hover {
 .movie,
 .show {
   width: 400px;
-  border: 1px solid gray;
   margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px -5px rgba(136, 136, 136, 1);
 }
 
 .errorMessage {
   margin: auto;
   font-weight: bold;
   color: rgb(161, 15, 15);
+}
+
+.imgWidth {
+  border-radius: 10px 10px 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+  .logo {
+    width: 25%;
+    margin: 10px 30px;
+  }
+  .button {
+    margin: 10px 10px 0 0;
+    padding: 5px;
+    font-size: small;
+  }
+  .movies,
+  .shows {
+    max-width: 300px;
+  }
+  .imgWidth {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .logo {
+    margin: 0 5px 0 -10px;
+  }
+  .movies,
+  .shows {
+    max-width: 250px;
+  }
+  .imgWidth {
+    width: 250px;
+  }
 }
