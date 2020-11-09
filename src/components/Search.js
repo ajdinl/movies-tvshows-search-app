@@ -3,11 +3,22 @@ import React, { useState } from 'react'
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState('')
 
-  const callSubmitFunction = (e) => {
+  const callSubmitFunction = async (e) => {
     setSearchValue(e.target.value)
-    setTimeout(() => {
-      props.search(searchValue)
-    }, 1000)
+    e.persist()
+
+    if (searchValue.length < 2) {
+      console.log('wait')
+      return
+    }
+
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
+
+    props.search(searchValue)
   }
 
   return (
@@ -16,7 +27,8 @@ const Search = (props) => {
         type='text'
         placeholder='Search here'
         minLength='3'
-        onKeyUp={callSubmitFunction}
+        value={searchValue}
+        onChange={callSubmitFunction}
       />
     </form>
   )
