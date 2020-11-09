@@ -7,8 +7,8 @@ body {
 }
 
 .App {
-  margin: auto;
-  width: 50%;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .App-header {
@@ -55,7 +55,7 @@ body {
 .search > input[type='text'] {
   border: 1px solid black;
   padding: 10px;
-  width: 50%;
+  width: 70%;
   min-width: 170px;
   box-shadow: 0px 0px 20px -5px rgba(136, 136, 136, 1);
 }
@@ -67,10 +67,9 @@ body {
 .movies,
 .shows {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 10px;
-  max-width: 1000px;
 }
 
 .movie,
@@ -91,9 +90,29 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
+@media only screen and (min-width: 1700px) {
+  .App {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .movies,
+  .shows {
+    max-width: 700px;
+  }
+  .movie,
+  .show {
+    max-width: 300px;
+  }
+  .imgWidth {
+    width: 300px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .App {
-    width: 100%;
+    width: 60%;
   }
   .logo {
     width: 25%;
@@ -106,6 +125,8 @@ body {
   }
   .movies,
   .shows {
+    margin-left: 5%;
+    min-width: 250px;
     max-width: 300px;
   }
   .imgWidth {
@@ -113,12 +134,16 @@ body {
   }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
+  .App {
+    width: 80%;
+  }
   .logo {
     margin: 0 5px 0 -10px;
   }
   .movies,
   .shows {
+    min-width: 200px;
     max-width: 250px;
   }
   .imgWidth {
